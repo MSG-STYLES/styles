@@ -1,0 +1,551 @@
+@use "@carbon/styles";
+
+/*=============================================
+=            Custom variables            =
+=============================================*/
+$yahoo-blue: #0f69ff;
+$verizon-primary: black;
+$verizon-bg: black;
+$yahoo-bg: white !important;
+$yahoo-primary: #6000d3;
+$yahoo-bg: white;
+$yahoo-survey-footer-bg: #6000d3;
+/*=====  End of Variables  ======*/
+
+/*=============================================
+=            Kendo components            =
+=============================================*/
+$primary: black;
+$kendo-checkbox-checked-border: gray !important;
+$kendo-radio-checked-bg: $yahoo-blue  !important;
+// $kendo-radio-checked-bg: $verizon-primary  !important;
+$accent: black;
+$secondary: #b39ddb;
+$error: #b71c1c;
+
+/*=====  End of Kendo components comment block  ======*/
+
+@import "~@progress/kendo-theme-default/dist/all.scss";
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.continue-btn {
+  position: absolute !important;
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-left: 1em;
+}
+
+.survey-footer {
+  margin: 0;
+  padding: 0;
+}
+
+/* .footer-container {
+  height: 100% !important;
+} */
+
+/* Verizon CSS --> Move to file later. */
+
+.app-yahoo {
+  background-image: linear-gradient(176deg, #39007d 70%, white calc(70% + 2px));
+  height: 100vh;
+  // background: url("yahoo-bg.jpg") no-repeat 0 0;
+  // background-size: cover;
+  // background-image: url("./logo192.png");
+  background-color: #cccccc;
+}
+
+.navbar-yahoo {
+  background-color: RGB(255, 255, 255) !important;
+  color: white !important;
+  fill: white !important;
+  box-shadow: 2px 2px 2px;
+}
+
+.links-yahoo {
+  color: #2e353c !important;
+  margin: 2em;
+  font-weight: bolder;
+}
+
+.logo-yahoo {
+  transform: scale(0.8) !important;
+}
+
+.continue-btn-yahoo {
+  border-radius: 35px !important;
+  background-color: #6306d3 !important;
+  border: 2px solid #6306d3 !important;
+  color: White !important;
+}
+
+/* Verizon*/
+
+.navbar-verizon {
+  background-color: $verizon-primary  !important;
+  position: relative !important;
+  min-height: 5em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.app-verizon {
+  background: #e9e9e9;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo-verizon {
+  // position: absolute;
+  // left: 50%;
+  transform: translateX(-50%, -50%) !important;
+  transform: scale(0.5);
+  margin: 0 auto;
+  // transform: scale(1.2);
+}
+
+.links-verizon {
+  color: white !important;
+  margin: 1.5em !important;
+  padding-bottom: 1.5em;
+}
+
+.navbar-logo-verizon {
+  position: absolute;
+
+}
+
+.navbar-links-verizon {
+  position: absolute;
+  right: 10%;
+  top: 4em;
+}
+
+footer {
+  &.page-footer-yahoo {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    font-size: 0.825rem;
+
+    .container {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 992px;
+
+      .logo {
+        margin: 20px 0 0;
+        padding: 0;
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .logo-yahoo {}
+
+        img {
+          height: 40px;
+        }
+      }
+
+      .row {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        .links {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          color: $yahoo-primary;
+          width: auto;
+
+
+          .footer-nav {
+            text-align: left;
+            padding: 20px 20px 20px;
+            color: $yahoo-primary;
+            position: absolute;
+            left: 0;
+            margin: 2em;
+          }
+
+          ul {
+            display: flex;
+            position: absolute;
+
+            li {
+              list-style: none;
+              padding-left: 30px;
+            }
+          }
+        }
+
+        a:link,
+        a:hover,
+        a:visited {
+          margin: 0 auto;
+          padding: 0;
+          color: $yahoo-primary;
+        }
+      }
+    }
+  }
+
+  &.page-footer-verizon {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    background: rgba(0, 0, 0, 1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    font-size: 0.825rem;
+    padding-left: 1em;
+
+    .container {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 992px;
+
+      .row {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        .logo {
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          text-align: right;
+
+          img {
+            height: 25px;
+          }
+        }
+
+        .links {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          width: auto;
+
+          .footer-nav {
+            text-align: left;
+            padding: 20px 20px 20px;
+            color: white;
+          }
+
+          ul {
+            display: flex;
+
+            li {
+              list-style: none;
+              padding-left: 30px;
+            }
+          }
+        }
+
+        a:link,
+        a:hover,
+        a:visited {
+          margin: 0 auto;
+          padding: 0;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.survey-container {
+  position: relative !important;
+  background: #f7f7f7;
+  padding: 5em;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.question {
+  padding: 2em;
+  display: flex;
+  flex-direction: column !important;
+  font-weight: 600 !important;
+}
+
+ul>.k-radio-item {
+  width: 100% !important;
+}
+
+.question-count {
+  color: #f9c36b;
+  margin-top: 2em;
+  font-size: 80%;
+  font-family: Tahoma;
+  color: $yahoo-blue;
+}
+
+.question-count-verizon {
+  color: $verizon-primary;
+
+}
+
+.question-count-yahoo {
+  color: $yahoo-blue;
+
+}
+
+.mobile-survey {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  padding: 1.5em;
+}
+
+.mobile-survey-title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: Tahoma;
+}
+
+.mobile-survey-title-verizon {
+  color: $verizon-primary;
+}
+
+.mobile-survey-title-yahoo {
+  color: $yahoo-blue;
+}
+
+
+.mobile-survey-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.mobile-survey-footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: $primary;
+  position: absolute;
+  left: 0;
+  justify-content: space-evenly;
+  height: 4rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.mobile-survey-footer-yahoo {
+  background: $yahoo-survey-footer-bg;
+}
+
+.mobile-survey-next-btn {
+  margin-left: 1em;
+  border-radius: 22px;
+  height: 40px;
+  border: 2px solid white !important;
+  outline: white;
+}
+
+.mobile-survey-next-btn-yahoo {
+  background: $yahoo-bg;
+  color: $yahoo-primary;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.k-radio-item {
+  width: 60% !important;
+  background: inherit;
+  margin-bottom: 1.4em;
+  border-radius: 6px;
+  padding: 0.3em !important;
+}
+
+.k-radio {
+  margin-right: 1em !important;
+}
+
+.mobile-survey-btn {
+  padding: 1em;
+  width: 130px;
+  height: 40px;
+  border: 2px solid white !important;
+  border-radius: 22px;
+  line-height: 0px;
+  margin-left: 1em;
+  font-family: Tahoma;
+}
+
+.mobile-survey-product-title {
+  font-family: Tahoma;
+  margin-bottom: 1em;
+}
+
+.mobile-survey-back-yahoo {
+  color: $yahoo-primary  !important;
+  background: $yahoo-bg;
+}
+
+.mobile-survey-back-verizon {
+  color: white;
+  background: $verizon-bg  !important;
+}
+
+.mobile-survey-complete {
+  margin-left: 1em;
+}
+
+.mobile-survey-next-btn-yahoo {
+  border: 2px solid $yahoo-primary  !important;
+  background: $yahoo-bg;
+  color: $yahoo-primary;
+}
+
+.mobile-survey-next-btn-verizon {
+  border: 2px solid white !important;
+  background: $verizon-bg;
+  color: white;
+}
+
+.k-radio:checked {
+  // background-color: $primary !important;
+}
+
+.surveyComplete {
+  padding: 1em;
+}
+
+.footer.page-footer-yahoo {
+  transform: scale(0.3);
+}
+
+.legend-yahoo {
+  color: $yahoo-blue  !important;
+}
+
+.legend-verizon {
+  color: $verizon-primary  !important;
+}
+
+.survey-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.survey-table td,
+.survey-table th {
+
+  padding: 8px;
+  font-weight: bold;
+}
+
+.survey-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.survey-table tr:hover {
+  background-color: #ddd;
+}
+
+.survey-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+  width: 100vw;
+}
+
+.survey-table-verizon th {
+  background-color: $verizon-primary  !important;
+}
+
+.survey-table-yahoo th {
+  background-color: $yahoo-primary  !important;
+}
+
+.survey-table-yahoo {
+  width: 80vw;
+}
+
+.survey-table-verizon {
+  width: 80vw;
+}
+
+.cds--progress {
+  position: relative;
+  // left: 3em;
+}
+
+.cds--progress-verizon {
+  position: relative;
+  left: 0
+}
+
+.cds--progress-yahoo {
+  position: relative;
+  left: 0
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .cds--progress {
+    display: flex;
+    justify-content: center;
+  }
+
+
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .cds--progress {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+iframe
+{
+    display: none;
+}
