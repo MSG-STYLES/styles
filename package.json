@@ -1,0 +1,22 @@
+{
+  "name": "styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSG-STYLES/styles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSG-STYLES/styles/issues"
+  },
+  "homepage": "https://github.com/MSG-STYLES/styles#readme",
+  "dependencies": {
+    "@progress/kendo-theme-default": "^5.5.0"
+  }
+}
