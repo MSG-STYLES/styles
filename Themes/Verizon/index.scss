@@ -1,5 +1,3 @@
-@import "~@progress/kendo-theme-default/dist/all.scss";
-
 $verizon-primary: black;
 $verizon-bg: black;
 $primary: $verizon-primary;
@@ -8,6 +6,7 @@ $secondary: #b39ddb;
 $error: #b71c1c;
 $kendo-radio-checked-bg: $verizon-primary  !important;
 
+@import "~@progress/kendo-theme-default/dist/all.scss";
 
 .navbar-verizon {
     background-color: $verizon-primary  !important;
